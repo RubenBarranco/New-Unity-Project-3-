@@ -22,6 +22,8 @@ public class MainScript : MonoBehaviour {
     float counterEnemyExplosion;
     float pixelPerfectX;
     float pixelPerfectY;
+    float totalPixelX;
+    float totalPixelY;
     bool BeginMovement;
     bool finishMovement;
     bool moving;
@@ -36,9 +38,12 @@ public class MainScript : MonoBehaviour {
     public static int counterHit;
     public static int score;
     public static int bulletTimes;
+    public RectTransform PixelCanvas;
     float counterExplosion;
     private void Start()
     {
+        totalPixelY = (PixelCanvas.rect.width)/2;
+        totalPixelX = (PixelCanvas.rect.height)/2;
         bulletMovement.reversalSpeed = speedBullet;
         win = false;
         endGame = false;
@@ -146,10 +151,10 @@ public class MainScript : MonoBehaviour {
                 Vector3 MousePos = Input.mousePosition;
                 Debug.Log(MousePos.x);
                 Debug.Log(MousePos.x - 546.5f);
-                pixelPerfectX = (MousePos.x - 478f) / 51.4f;
+                pixelPerfectX = (MousePos.x - totalPixelY) / 51.4f;
                 Debug.Log(MousePos.y);
                 Debug.Log(MousePos.y - 257f);
-                pixelPerfectY = (MousePos.y - 257f) / 51.4f;
+                pixelPerfectY = (MousePos.y - totalPixelX) / 51.4f;
                 finishPosition = new Vector3((pixelPerfectX), (pixelPerfectY), 0);
                 explosionAnimPos.transform.position = finishPosition;
                 BeginMovement = true;

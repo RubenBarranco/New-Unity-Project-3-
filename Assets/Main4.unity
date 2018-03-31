@@ -1506,6 +1506,7 @@ MonoBehaviour:
   scoreText: {fileID: 1301458881}
   lives: {fileID: 1157734447}
   finalScore: {fileID: 1693979134}
+  PixelCanvas: {fileID: 629523172}
 --- !u!1 &1333251279
 GameObject:
   m_ObjectHideFlags: 0
