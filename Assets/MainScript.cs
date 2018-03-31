@@ -18,7 +18,6 @@ public class MainScript : MonoBehaviour {
     Vector3 actualPosition;
     Vector3 finishPosition;
     Vector3 pixelMove;
-    public int level;
     float counterEnemyExplosion;
     float pixelPerfectX;
     float pixelPerfectY;

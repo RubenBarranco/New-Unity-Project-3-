@@ -15,6 +15,6 @@ public class MainScenario : MonoBehaviour {
 	}
     public void NextScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }
